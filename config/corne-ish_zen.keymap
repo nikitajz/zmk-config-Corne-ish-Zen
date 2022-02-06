@@ -12,8 +12,7 @@
 #define QWE 0
 #define NUM 1
 #define SYM 2
-#define NMP 3
-#define CFG 4
+#define CFG 3
 
 / {
         keymap {
@@ -44,8 +43,8 @@
                         bindings = <
    &kp ESC     &kp N1  &kp N2  &kp N3    &kp N4    &kp N5        &kp N6   &kp N7    &kp N8    &kp N9    &kp N0   &kp DEL
    &kp GRAVE   &none   &none   &kp PSCRN &kp MINUS &kp EQUAL     &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &kp SEMI &kp PIPE 
-   &tog NUMPAD &none   &none   &kp BSLH  &kp LBKT  &kp RBKT      &kp HOME &kp PG_DN &kp PG_UP &kp END   &none    &none
-               	             &kp LCMD  &mo NUM   &kp SPACE     &kp RET  &mo SYM   &kp RALT
+   &none       &none   &none   &kp BSLH  &kp LBKT  &kp RBKT      &kp HOME &kp PG_DN &kp PG_UP &kp END   &none    &none
+               	               &kp LCMD  &mo NUM   &kp SPACE     &kp RET  &mo SYM   &kp RALT
                         >;
                 };
 
@@ -62,23 +61,8 @@
    &trans    &trans   &trans &trans   &trans   &trans       &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
                              &kp LCMD &mo NUM  &kp SPACE    &kp RET   &mo SYM   &kp RALT
                         >;
-                };
-                
-                numpad_layer {
-                        label = "NUMPAD";
-// -----------------------------------------------------------------------------------------
-// |  TAB    |     |     |     |     |     |   |  =  |  7  |  8  |  9  |  -  | BSPC |
-// | NUMLOCK |     |     |     |     |     |   |  *  |  4  |  5  |  6  |  +  |      |
-// | NUMPAD  |     |     |     |     |     |   |  /  |  1  |  2  |  3  | ENT |      |
-//                       | LCMD| NUM | SPC |   | SPC |  0  |  .  |                        
-                        bindings = < 
-   &kp TAB     &none &none &none &none &none      &kp KP_EQUAL    &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_MINUS &kp BSPC
-   &kp KP_NLCK &none &none &none &none &none      &kp KP_ASTERISK &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_PLUS  &none
-   &tog NUMPAD &none &none &none &none &none      &kp KP_SLASH    &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_ENTER &none
-                     &mo LCMD &mo NUM  &kp SPC    &kp RET         &kp KP_N0 &kp KP_DOT
-                        >;
-                };                
-                
+                };             
+             
                 config_layer {
                         label = "CONFIG";
 // -----------------------------------------------------------------------------------------
