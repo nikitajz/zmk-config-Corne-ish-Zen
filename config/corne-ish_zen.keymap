@@ -12,55 +12,87 @@
 #define QWE 0
 #define NUM 1
 #define SYM 2
+#define NMP 3
+#define CFG 4
 
 / {
         keymap {
                 compatible = "zmk,keymap";
 
                 default_layer {
-                        label = "QWE";
+                        label = "QWERTY";
 // -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |     |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | SHFT |  A  |  S  |  D  |  F  |  G  |     |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | CTRL |  Z  |  X  |  C  |  V  |  B  |     |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                    | CMD | LWR | SPC |     | ENT | RSE  | ALT |
+// |  TAB |  Q  |  W  |  E  |  R   |  T  |     |  Y  |  U   |  I  |  O  |  P  |   BKSP   |
+// | SHFT |  A  |  S  |  D  |  F   |  G  |     |  H  |  J   |  K  |  L  |  ;  | ' (!CFG) |
+// | CTRL |  Z  |  X  |  C  |  V   |  B  |     |  N  |  M   |  ,  |  .  |  /  |    ESC   |
+//                    | CMD | !NUM | SPC |     | ENT | !SYM  | ALT |
                         bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T     &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &kp LSHFT &kp A &kp S &kp D &kp F &kp G     &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LCTRL &kp Z &kp X &kp C &kp V &kp B     &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
+   &kp TAB   &kp Q &kp W &kp E &kp R &kp T     &kp Y &kp U  &kp I     &kp O   &kp P     &kp BSPC
+   &kp LSHFT &kp A &kp S &kp D &kp F &kp G     &kp H &kp J  &kp K     &kp L   &kp SEMI  &lt CFG SQT
+   &kp LCTRL &kp Z &kp X &kp C &kp V &kp B     &kp N &kp M  &kp COMMA &kp DOT &kp FSLH  &kp ESC
                   &kp LCMD &mo NUM &kp SPACE   &kp RET &mo SYM &kp RALT
                         >;
                 };
                 
                 lower_layer {
-                        label = "NUM";
+                        label = "NUMROW";
 // -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// |BT_CLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-// | CTRL |     |     |     |     |     |   | HOME|PG_DN|PG_UP| END |     |      |
-//                    | LCMD|     | SPC |   | ENT |     | ALT |
+// |  ESC  |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | DEL |
+// |  `    |     |     |PSCRN|  -  |  =  |   | LFT | DWN |  UP | RGT |  ;  | "|" |
+// | NUMPAD|     |     |  \  |  (  |  )  |   | HOME|PG_DN|PG_UP| END |     |     |
+//                     | LCMD|     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7    &kp N8    &kp N9    &kp N0 &kp BSPC
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &trans &trans
-   &trans     &trans       &trans       &trans       &trans       &trans         &kp HOME &kp PG_DN &kp PG_UP &kp END   &trans &trans
-                          	        &kp LCMD     &mo NUM      &kp SPACE      &kp RET  &mo SYM   &kp RALT
+   &kp ESC     &kp N1  &kp N2  &kp N3    &kp N4    &kp N5        &kp N6   &kp N7    &kp N8    &kp N9    &kp N0   &kp DEL
+   &kp GRAVE   &none   &none   &kp PSCRN &kp MINUS &kp EQUAL     &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &kp SEMI &kp PIPE 
+   &tog NUMPAD &none   &none   &kp BSLH  &kp LBKT  &kp RBKT      &kp HOME &kp PG_DN &kp PG_UP &kp END   &none    &none
+               	             &kp LCMD  &mo NUM   &kp SPACE     &kp RET  &mo SYM   &kp RALT
                         >;
                 };
 
                 raise_layer {
-                        label = "SYM";
+                        label = "SYMBOL";
 // -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
+// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | DEL  |
 // | SHFT |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
 // | CTRL |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
 //                    | LCMD|     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &kp TAB   &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT    &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
+   &kp TAB   &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT    &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp DEL
    &trans    &trans   &trans &trans   &trans   &trans       &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
    &trans    &trans   &trans &trans   &trans   &trans       &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
                              &kp LCMD &mo NUM  &kp SPACE    &kp RET   &mo SYM   &kp RALT
                         >;
                 };
+                
+                numpad_layer {
+                        label = "NUMPAD";
+// -----------------------------------------------------------------------------------------
+// |  TAB    |     |     |     |     |     |   |  =  |  7  |  8  |  9  |  -  | BSPC |
+// | NUMLOCK |     |     |     |     |     |   |  *  |  4  |  5  |  6  |  +  |      |
+// | NUMPAD  |     |     |     |     |     |   |  /  |  1  |  2  |  3  | ENT |      |
+//                       | LCMD| NUM | SPC |   | SPC |  0  |  .  |                        
+                        bindings = < 
+   &kp TAB     &none &none &none &none &none      &kp KP_EQUAL    &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_MINUS &kp BSPC
+   &kp KP_NLCK &none &none &none &none &none      &kp KP_ASTERISK &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_PLUS  &none
+   &tog NUMPAD &none &none &none &none &none      &kp KP_SLASH    &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_ENTER &none
+                     &mo LCMD &mo NUM  &kp SPC    &kp RET         &kp KP_N0 &kp KP_DOT
+                        >;
+                };                
+                
+                config_layer {
+                        label = "CONFIG";
+// -----------------------------------------------------------------------------------------
+// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+// |BT_CLR| BT1 | BT2 | BT3 | BT4 | BT5 |   |     |     |     |     |     |      |
+// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+//                    | LCMD|     | SPC |   | ENT |     | ALT |
+                        bindings = <
+   &reset     &none        &none        &none        &none        &none          &none    &none     &none     &none     &none  &none
+   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &none    &none     &none     &none     &none  &none
+   &none      &none        &none        &none        &none        &none          &none    &none     &none     &none     &none  &none
+                          	        &kp LCMD     &mo NUM      &kp SPC        &kp RET  &mo SYM   &kp RALT
+                        >;
+                };
+                
         };
-        &reset
 };
