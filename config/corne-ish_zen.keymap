@@ -12,7 +12,7 @@
 #define QWE 0
 #define NUM 1
 #define SYM 2
-#define CFG 3
+#define ADJ 3
 #define NMP 4
 #define NAV 5
 
@@ -24,12 +24,12 @@
                         label = "QWERTY";
 // ----------------------------------------------------------------------------------------------------------
 // |  TAB  |   Q   |   W   |   E   |   R   |   T   | ----- |   Y   |   U   |   I   |   O   |   P   |  BKSP  |
-// | SHIFT |   A   |   S   |   D   |   F   |   G   | ----- |   H   |   J   |   K   |   L   |   ;   | ^CFG/' |
+// | SHIFT |   A   |   S   |   D   |   F   |   G   | ----- |   H   |   J   |   K   |   L   |   ;   | ^ADJ/' |
 // |  CTRL |   Z   |   X   |   C   |   V   |   B   | ----- |   N   |   M   |   ,   |   .   |   /   |   ESC  |
 //                           |  CMD | ^NUM/ESC | SPC | - | ^NAV/ENT | !SYM/BKSP  | ALT |
                         bindings = <
    &kp TAB   &kp Q &kp W &kp E &kp R &kp T     &kp Y &kp U  &kp I     &kp O   &kp P     &kp BSPC
-   &kp LSHFT &kp A &kp S &kp D &kp F &kp G     &kp H &kp J  &kp K     &kp L   &kp SEMI  &lt CFG SQT
+   &kp LSHFT &kp A &kp S &kp D &kp F &kp G     &kp H &kp J  &kp K     &kp L   &kp SEMI  &lt ADJ SQT
    &kp LCTRL &kp Z &kp X &kp C &kp V &kp B     &kp N &kp M  &kp COMMA &kp DOT &kp FSLH  &kp ESC
                   &kp LCMD &lt NUM ESC &kp SPACE   &lt NAV RET &lt SYM BKSP &kp RALT
                         >;
@@ -98,12 +98,12 @@
                 navigation_layer {
                         label = "NAVIG";
 // ---------------------------------------------------------------------------------------------------------------
-// |  TAB  |       |       |       |       |       | ----- |       |   PG_DN  |  UP   |   PG_UP   |       |       |
+// |  TAB  |       |       |       |       |       | ----- |       |   PG_UP  |  UP   |   PG_DN   |       |       |
 // | CAPS  |       |       |       |       |       | ----- | HOME  |   LEFT   | DOWN  |   RIGHT   |  END  | CAPS  |
 // | !NAV  |       |       |       |       |       | ----- | LC(A) | LA(LEFT) |       | LA(RIGHT) | LC(E) |       |
 //                           | LCMD | ^NUM/ESC | SPC | - | ENT  |       |   ALT   |                        
                         bindings = < 
-   &kp TAB   &none   &none   &none   &none   &none          &none   &kp PG_DN    &kp UP   &kp PG_UP     &none     &none
+   &kp TAB   &none   &none   &none   &none   &none          &none   &kp PG_UP    &kp UP   &kp PG_DN     &none     &none
    &kp CAPS  &none   &none   &none   &none   &none        &kp HOME  &kp LEFT     &kp DOWN &kp RIGHT     &none     &kp CAPS
    &tog NAV  &none   &none   &none   &none   &none        &kp LC(A) &kp LA(LEFT) &none    &kp LA(RIGHT) &kp LC(E) &none
                       &mo LCMD &lt NUM ESC  &kp SPC    &kp RET   &mo SYM   &kp RALT
