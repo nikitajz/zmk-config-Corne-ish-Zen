@@ -66,16 +66,16 @@
                 };             
              
                 config_layer {
-                        label = "CONFIG";  //+MEDIA
+                        label = "ADJUST";  //+MEDIA
 // -----------------------------------------------------------------------------------------------------------
-// |      |       |       |       |       |       | ----- |       | VOL_DN |  MUTE  | VOL_UP |       |       |
-// |BT_CLR|  BT1  |  BT2  |  BT3  |  BT4  |  BT5  | ----- |       |  PREV  |  P/P   |  NEXT  |       |       |
-// |      |       |       |       |       |       | ----- |       |        |  STOP  |        |       |       |
+// |      |       |       |       |       |       | ----- |C_VOL_DN| VOL_DN |  MUTE  | VOL_UP |C_VOL_UP|       |
+// |BT_CLR|  BT1  |  BT2  |  BT3  |  BT4  |  BT5  | ----- |        |  PREV  |  P/P   |  NEXT  |        |       |
+// |      |       |       |       |       |       | ----- |        |        |  STOP  |        |        |       |
 //                          |  CMD | ^NUM/ESC | SPC | - | ^NAV/ENT | !SYM/BKSP  | ALT |
                         bindings = <
-   &reset     &none        &none        &none        &none        &none          &none    &kp C_VOL_DN &kp C_MUTE &kp C_VOL_UP   &none  &none
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &none    &kp C_PREV   &kp C_PP   &kp C_NEXT     &none  &none
-   &none      &none        &none        &none        &none        &none          &none    &none        &kp C_STOP &none          &none  &none
+   &reset     &none        &none        &none        &none        &none          &kp C_VOL_DN &kp K_VOL_DN &kp C_MUTE &kp K_VOL_UP &kp C_VOL_UP   &none
+   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &none        &kp C_PREV   &kp C_PP   &kp C_NEXT   &none          &none
+   &none      &none        &none        &none        &none        &none          &none        &none        &kp C_STOP &none        &none          &none
                           	          &kp LCMD &lt NUM ESC &kp SPACE         &lt NAV RET &lt SYM BKSP &kp RALT
                         >;
                 };
