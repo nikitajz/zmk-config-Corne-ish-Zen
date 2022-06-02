@@ -104,7 +104,7 @@
 //                           | LCMD | ^NUM/ESC | SPC | - | ENT  |       |   ALT   |                        
                         bindings = < 
    &kp TAB   &none   &none   &none   &none   &none          &none   &kp PG_UP    &kp UP   &kp PG_DN     &none     &none
-   &kp CAPS  &none   &none   &none   &none   &none        &kp HOME  &kp LEFT     &kp DOWN &kp RIGHT     &none     &kp CAPS
+   &kp CAPS  &none   &none   &none   &none   &none        &kp HOME  &kp LEFT     &kp DOWN &kp RIGHT     &kp END   &kp CAPS
    &tog NAV  &none   &none   &none   &none   &none        &kp LC(A) &kp LA(LEFT) &none    &kp LA(RIGHT) &kp LC(E) &none
                       &mo LCMD &lt NUM ESC  &kp SPC    &kp RET   &mo SYM   &kp RALT
                         >;
