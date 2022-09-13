@@ -24,12 +24,12 @@
                         label = "QWERTY";
 // ----------------------------------------------------------------------------------------------------------
 // |  TAB  |   Q   |   W   |   E   |   R   |   T   | ------- |   Y   |   U   |   I   |   O   |   P   |  BKSP  |
-// | SHIFT |   A   |   S   |   D   |   F   |   G   | ------- |   H   |   J   |   K   |   L   |   ;   | ^ADJ/' |
+// |  ALT  |   A   |   S   |   D   |   F   |   G   | ------- |   H   |   J   |   K   |   L   |   ;   | ^ADJ/' |
 // |  CTRL |   Z   |   X   |   C   |   V   |   B   | ------- |   N   |   M   |   ,   |   .   |   /   |   ESC  |
 //                      |  CMD | ^NUM/ESC | SHIFT/SPC | - | ^SYM/ENT | ^NAV/BKSP  | ALT |
                         bindings = <
  &kp TAB      &kp Q    &kp W    &kp E    &kp R    &kp T        &kp Y    &kp U     &kp I        &kp O      &kp P        &kp BSPC
- &kp LSHFT    &kp A    &kp S    &kp D    &kp F    &kp G        &kp H    &kp J     &kp K        &kp L      &kp SEMI     &lt ADJ SQT
+ &kp LALT    &kp A    &kp S    &kp D    &kp F    &kp G        &kp H    &kp J     &kp K        &kp L      &kp SEMI     &lt ADJ SQT
  &kp LCTRL    &kp Z    &kp X    &kp C    &kp V    &kp B        &kp N    &kp M     &kp COMMA    &kp DOT    &kp FSLH     &kp ESC
                     &kp LCMD &lt NUM ESC &lt LSHFT SPACE     &lt SYM RET &lt NAV BKSP &kp RALT
                            >;
@@ -55,12 +55,21 @@
                 lower_layer {
                         label = "NUMROW";
 // ---------------------------------------------------------------------------------------------------------
-// |   `    |  F1   |  F2   |  F3   |  F4   |  F5   | ------- |  F6   |  F7   |  F8   |  F9   |  F10  |       |
+// |        |  F1   |  F2   |  F3   |  F4   |  F5   | ------- |  F6   |  F7   |  F8   |  F9   |  F10  |       |
 // |   ESC  |   1   |   2   |   3   |   4   |   5   | ------- |   6   |   7   |   8   |   9   |   0   |       |
 // | !NUMPAD|  F11  |  F12  |   [   |   ]   |   `   | ------- |   `   |   -   |   =   |   \   |       |       |
 //                            |  CMD | ^NUM/ESC | SPC | - | ^SYM/ENT | ^NAV/BKSP  | ALT |
+
+// ++SHIFT
+// ---------------------------------------------------------------------------------------------------------
+// |        |  F1   |  F2   |  F3   |  F4   |  F5   | ------- |  F6   |  F7   |  F8   |  F9   |  F10  |       |
+// |   ESC  |   !   |   @   |   #   |   $   |   %   | ------- |   ^   |   &   |   *   |   (   |   )   |       |
+// | !NUMPAD|  F11  |  F12  |   {   |   }   |   ~   | ------- |   ~   |   -   |   =   |   \   |       |       |
+//                            |  CMD | ^NUM/ESC | SPC | - | ^SYM/ENT | ^NAV/BKSP  | ALT |
+
+
                         bindings = <
-   &kp GRAVE   &kp F1   &kp F2    &kp F3    &kp F4    &kp F5        &kp F6       &kp F7       &kp F8    &kp F9    &kp F10   &none
+   &none       &kp F1   &kp F2    &kp F3    &kp F4    &kp F5        &kp F6       &kp F7       &kp F8    &kp F9    &kp F10   &none
    &kp ESC     &kp N1   &kp N2    &kp N3    &kp N4    &kp N5        &kp N6       &kp N7       &kp N8    &kp N9    &kp N0    &none
    &tog NMP    &kp F11  &kp F12   &kp LBKT  &kp RBKT  &kp GRAVE     &kp GRAVE    &kp KP_MINUS &kp KP_EQUAL &none  &kp BSLH  &none
                	              &kp LCMD &lt NUM ESC &kp SPACE   &lt SYM RET &lt NAV BKSP &kp RALT
