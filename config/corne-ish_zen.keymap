@@ -41,13 +41,13 @@
 // ---------------------------------------------------------------------------------------------------------------
 // |  F1   |  F2   |  F3   |  F4   |  F5   |  F6   | ------- |  HOME  |   PG_UP  |  UP   |   PG_DN   |  END   |       |
 // |  F7   |  F8   |  F9   |  F10  |  F11  |  F12  | ------- |  LC(A) |   LEFT   | DOWN  |   RIGHT   |  LC(E) | CAPS  |
-// | !NAV  |       |       |       |       |       | ------- |        | LA(LEFT) |       | LA(RIGHT) |        |       |
+// | !NAV  | CMD(Z)| CMD(X)| CMD(C)| CMD(V)|       | ------- |        | LA(LEFT) |       | LA(RIGHT) |        |       |
 //                           | LCMD | ESC | SHIFT/SPC | - | ENT  |       |   ALT   |
                         bindings = <
-   &kp F1    &kp F2   &kp F3 &kp F4   &kp F5   &kp F6         &kp HOME  &kp PG_UP    &kp UP   &kp PG_DN      &kp END    &none
-   &kp F7    &kp F8   &kp F9 &kp F10  &kp F11  &kp F12        &kp LC(A) &kp LEFT     &kp DOWN &kp RIGHT      &kp LC(E)  &kp CAPS
-   &tog NAV  &none   &none   &none   &none   &none            &none     &kp LA(LEFT) &none    &kp LA(RIGHT)  &none      &none
-                      &mo LCMD &kp ESC  &lt LSHFT SPACE     &kp RET   &mo SYM   &kp RALT
+   &kp F1    &kp F2      &kp F3      &kp F4       &kp F5      &kp F6         &kp HOME  &kp PG_UP    &kp UP   &kp PG_DN      &kp END    &none
+   &kp F7    &kp F8      &kp F9      &kp F10      &kp F11     &kp F12        &kp LC(A) &kp LEFT     &kp DOWN &kp RIGHT      &kp LC(E)  &kp CAPS
+   &tog NAV  &kp LCMD(Z) &kp LCMD(X) &kp LCMD(C)  &kp LCMD(V) &none          &none     &kp LA(LEFT) &none    &kp LA(RIGHT)  &none      &none
+                                    &mo LCMD &kp ESC  &lt LSHFT SPACE     &kp RET   &mo SYM   &kp RALT
                         >;
                 };
 
