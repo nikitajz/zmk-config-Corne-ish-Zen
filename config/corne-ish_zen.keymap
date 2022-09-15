@@ -42,12 +42,12 @@
 // |  F1   |  F2   |  F3   |  F4   |  F5   |  F6   | ------- |  HOME  |   PG_UP  |  UP   |   PG_DN   |  END   |       |
 // |  F7   |  F8   |  F9   |  F10  |  F11  |  F12  | ------- |  LC(A) |   LEFT   | DOWN  |   RIGHT   |  LC(E) | CAPS  |
 // |       | CMD(Z)| CMD(X)| CMD(C)| CMD(V)|       | ------- |        | LA(LEFT) |       | LA(RIGHT) |        | !NAV  |
-//                           | LCMD | ESC | SHIFT/SPC | - |  ENT  |      |   ALT   |
+//                           | LCMD | ESC | SHIFT/SPC | - |  ENT  |  ^^^  |   ALT   |
                         bindings = <
    &kp F1  &kp F2    &kp F3    &kp F4     &kp F5    &kp F6         &kp HOME  &kp PG_UP    &kp UP   &kp PG_DN      &kp END    &none
    &kp F7  &kp F8    &kp F9    &kp F10    &kp F11   &kp F12        &kp LC(A) &kp LEFT     &kp DOWN &kp RIGHT      &kp LC(E)  &kp CAPS
    &none   &kp LG(Z) &kp LG(X) &kp LG(C)  &kp LG(V) &none          &none     &kp LA(LEFT) &none    &kp LA(RIGHT)  &none      &tog NAV
-                         &mo LCMD &kp ESC  &mt LSHIFT SPACE     &kp RET   &mo SYM   &kp RALT
+                         &mo LCMD &kp ESC  &mt LSHIFT SPACE     &kp RET   &trans   &kp RALT
                         >;
                 };
 
@@ -58,14 +58,14 @@
 // |        |  F1   |  F2   |  F3   |  F4   |  F5   | ------- |  F6   |  F7   |  F8   |  F9   |  F10  |       |
 // |   ESC  |   1   |   2   |   3   |   4   |   5   | ------- |   6   |   7   |   8   |   9   |   0   |       |
 // | !NUMPAD|  F11  |  F12  |   [   |   ]   |   `   | ------- |   `   |   -   |   =   |   \   |       |       |
-//                             |  CMD | ^NUM/ESC | SPC | - |  ENT  |  BKSP  | ALT |
+//                             |  CMD |  ^^^  | SPC | - |  ENT  |  BKSP  | ALT |
 
 // ++SHIFT
 // ---------------------------------------------------------------------------------------------------------
 // |        |  F1   |  F2   |  F3   |  F4   |  F5   | ------- |  F6   |  F7   |  F8   |  F9   |  F10  |       |
 // |   ESC  |   !   |   @   |   #   |   $   |   %   | ------- |   ^   |   &   |   *   |   (   |   )   |       |
 // | !NUMPAD|  F11  |  F12  |   {   |   }   |   ~   | ------- |   ~   |   -   |   =   |   \   |       |       |
-//                       |  CMD | ^NUM/ESC | SHIFT/SPC | - |  ENT  |  BKSP  | ALT |
+//                       |  CMD |  ^^^  | SHIFT/SPC | - |  ENT  |  BKSP  | ALT |
 
 
                         bindings = <
@@ -82,12 +82,12 @@
 // |       |   !   |   @   |   #   |   $   |   %   | ------- |   ^   |   &   |   *   |   (   |   )   |  DEL  |
 // |       |       |       |       |       |       | ------- |   `   |   [   |   ]   |   -   |   =   |   \   |
 // |       |       |       |       |       |       | ------- |   ~   |   {   |   }   |   _   |   +   |  "|"  |
-//                                 |  CMD | ESC | SPC | - | ^SYM/ENT | BKSP  | ALT |
+//                                 |  CMD | ESC | SPC | - |  ENT  |  BKSP  | ^^^ |
                         bindings = <
    &none     &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT    &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR  &kp DEL
    &none     &none    &none  &none    &none    &none        &kp GRAVE &kp LBKT &kp RBKT         &kp MINUS &kp EQUAL &kp BSLH
    &none     &none    &none  &none    &none    &none        &kp TILDE &kp LBRC &kp RBRC         &kp UNDER &kp PLUS  &kp PIPE
-                             &kp LCMD &kp ESC &kp SPACE   &lt SYM RET &kp BKSP &kp RALT
+                             &kp LCMD &kp ESC &kp SPACE   &kp RET  &kp BKSP  &trans
                         >;
                 };
 
@@ -97,12 +97,12 @@
 // |       |       |       |       |       |       | ------- |        | VOL_DN |  MUTE  | VOL_UP | C_ALT_AUDIO_INC |       |
 // |BT_CLR |  BT1  |  BT2  |  BT3  |  BT4  |  BT5  | ------- |        |  PREV  |  P/P   |  NEXT  |                 |       |
 // |       |       |       |       |       |       | ------- |        |  C_PIP |  STOP  |        |                 |       |
-//                            |  CMD | ^NUM/ESC | SPC | - | ^SYM/ENT | ^NAV/BKSP  | ALT |
+//                            |       |       |       | - |       |       |       |
                         bindings = <
    &reset     &none        &none        &none        &none        &none          &none   &kp C_VOL_DN &kp C_MUTE &kp C_VOL_UP &kp C_ALT_AUDIO_INC   &none
    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &none   &kp C_PREV   &kp C_PP   &kp C_NEXT   &none                 &none
    &none      &none        &none        &none        &none        &none          &none   &kp C_PIP    &kp C_STOP &none        &none                 &none
-                          	          &kp LCMD &lt NUM ESC &kp SPACE         &lt SYM RET &lt NAV BKSP &kp RALT
+                          	                     &trans  &trans  &trans         &trans  &trans &trans
                         >;
                 };
 
