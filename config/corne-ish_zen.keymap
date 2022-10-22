@@ -17,6 +17,25 @@
 #define NMP 5
 
 / {
+
+        macros {
+                c3gr: combo_3_grave {
+                        label = "Combo_3_GRAVE";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings
+                                = <&kp GRAVE &kp GRAVE &kp GRAVE>;
+                };
+                
+                c3dqt: combo_3_dqt {
+                        label = "Combo_3_DQT";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings
+                                = <&kp DQT &kp DQT &kp DQT>;
+                };
+        };
+
         keymap {
                 compatible = "zmk,keymap";
 
@@ -84,9 +103,9 @@
 // |       |       |   -   |   +   |   *   |       | ------- |   ~   |   :   |   {   |   }   |       |       |
 //                                 |  CMD | ESC | SPC | - |  ENT  |  BKSP  | ^^^ |
                         bindings = <
-   &none  &kp EXCL &kp AT    &kp HASH  &kp DLLR        &kp PRCNT    &kp CARET &kp AMPS  &kp LPAR  &kp RPAR  &none &kp BSPC
-   &none  &kp BSLH &kp UNDER &kp EQUAL &kp SLASH       &kp GRAVE    &kp PIPE  &kp DQT   &kp LBKT &kp RBKT   &none &kp DEL
-   &none  &none    &kp MINUS &kp PLUS  &kp KP_MULTIPLY &none        &kp TILDE &kp COLON &kp LBRC &kp RBRC   &none &none  
+   &none  &kp EXCL &kp AT    &kp HASH  &kp DLLR        &kp PRCNT    &kp CARET &kp AMPS  &kp LPAR &kp RPAR  &none  &kp BSPC
+   &none  &kp BSLH &kp UNDER &kp EQUAL &kp SLASH       &kp GRAVE    &kp PIPE  &kp DQT   &kp LBKT &kp RBKT  &c3dqt &kp DEL
+   &none  &none    &kp MINUS &kp PLUS  &kp KP_MULTIPLY &c3gr        &kp TILDE &kp COLON &kp LBRC &kp RBRC  &none  &none  
                              &kp LCMD &kp ESC &kp SPACE   &kp RET  &kp BKSP  &trans
                         >;
                 };
