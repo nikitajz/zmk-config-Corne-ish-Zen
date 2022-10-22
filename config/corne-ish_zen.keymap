@@ -58,14 +58,14 @@
                 navigation_layer {
                         label = "NAVIG";
 // ---------------------------------------------------------------------------------------------------------------
-// |  F1   |  F2   |  F3   |  F4   |  F5   |  F6   | ------- |  HOME  |   PG_UP  |  UP   |   PG_DN   |  END   | BKSP  |
-// |  F7   |  F8   |  F9   |  F10  |  F11  |  F12  | ------- |  LC(A) |   LEFT   | DOWN  |   RIGHT   |  LC(E) | CAPS  |
-// |       | CMD(Z)| CMD(X)| CMD(C)| CMD(V)|       | ------- |        | LA(LEFT) |       | LA(RIGHT) |        | !NAV  |
+// |  F1   |  F2   |  F3   |  F4   |  F5   |  F6   | ------- |  PG_UP | LA(LEFT)  |  UP   | LA(RIGHT)  |  HOME  |  BKSP    |
+// |  F7   |  F8   |  F9   |  F10  |  F11  |  F12  | ------- |  PG_DN |   LEFT    | DOWN  |   RIGHT    |  END   | LA(BKSP) |
+// | CAPS  | CMD(Z)| CMD(X)| CMD(C)| CMD(V)|       | ------- |  !NAV  | CMD(LEFT) |       | CMD(RIGHT) |        |   DEL    |
 //                           | LCMD | ESC | SHIFT/SPC | - |  ENT  |  ^^^  |   ALT   |
                         bindings = <
-   &kp F1  &kp F2    &kp F3    &kp F4     &kp F5    &kp F6         &kp HOME  &kp PG_UP    &kp UP   &kp PG_DN      &kp END    &kp BSPC
-   &kp F7  &kp F8    &kp F9    &kp F10    &kp F11   &kp F12        &kp LC(A) &kp LEFT     &kp DOWN &kp RIGHT      &kp LC(E)  &kp CAPS
-   &none   &kp LG(Z) &kp LG(X) &kp LG(C)  &kp LG(V) &none          &none     &kp LA(LEFT) &none    &kp LA(RIGHT)  &none      &tog NAV
+   &kp F1   &kp F2    &kp F3    &kp F4     &kp F5    &kp F6         &kp PG_UP  &kp LA(LEFT)   &kp UP   &kp LA(RIGHT)   &kp LCMD(UP)   &kp BSPC
+   &kp F7   &kp F8    &kp F9    &kp F10    &kp F11   &kp F12        &kp PG_DN  &kp LEFT       &kp DOWN &kp RIGHT       &kp LCMD(DOWN) &kp LA(BKSP)
+   &kp CAPS &kp LG(Z) &kp LG(X) &kp LG(C)  &kp LG(V) &none          &tog NAV   &kp LCMD(LEFT) &none    &kp LCDM(RIGHT) &none          &kp DEL
                          &mo LCMD &kp ESC  &mt LSHIFT SPACE     &kp RET   &trans   &kp RALT
                         >;
                 };
@@ -98,14 +98,14 @@
                 raise_layer {
                         label = "SYMBOL";
 // ---------------------------------------------------------------------------------------------------------
-// |       |   !   |   @   |   #   |   $   |   %   | ------- |   ^   |   &   |   (   |   )   |       |  BSPC |
-// |       |   \   |   _   |   =   |   /   |   `   | ------- |  "|"  |   "   |   [   |   ]   |       |  DEL  |
-// |       |       |   -   |   +   |   *   |       | ------- |   ~   |   :   |   {   |   }   |       |       |
+// |       |   !   |   @   |   #   |   $   |   %   | ------- |   ^   |   &   |   (   |   )   |       |   BSPC    |
+// |       |   \   |   _   |   =   |   /   |   `   | ------- |  "|"  |   "   |   [   |   ]   |       |  LA(BKSP) |
+// |       |       |   -   |   +   |   *   |       | ------- |   ~   |   :   |   {   |   }   |       |   DEL     |
 //                                 |  CMD | ESC | SPC | - |  ENT  |  BKSP  | ^^^ |
                         bindings = <
    &none  &kp EXCL &kp AT    &kp HASH  &kp DLLR        &kp PRCNT    &kp CARET &kp AMPS  &kp LPAR &kp RPAR  &none  &kp BSPC
-   &none  &kp BSLH &kp UNDER &kp EQUAL &kp SLASH       &kp GRAVE    &kp PIPE  &kp DQT   &kp LBKT &kp RBKT  &c3dqt &kp DEL
-   &none  &none    &kp MINUS &kp PLUS  &kp KP_MULTIPLY &c3gr        &kp TILDE &kp COLON &kp LBRC &kp RBRC  &none  &none  
+   &none  &kp BSLH &kp UNDER &kp EQUAL &kp SLASH       &kp GRAVE    &kp PIPE  &kp DQT   &kp LBKT &kp RBKT  &c3dqt &kp LA(BKSP)
+   &none  &none    &kp MINUS &kp PLUS  &kp KP_MULTIPLY &c3gr        &kp TILDE &kp COLON &kp LBRC &kp RBRC  &none  &kp DEL
                              &kp LCMD &kp ESC &kp SPACE   &kp RET  &kp BKSP  &trans
                         >;
                 };
