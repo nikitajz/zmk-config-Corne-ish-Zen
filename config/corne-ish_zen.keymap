@@ -110,12 +110,12 @@
 // |       |   !   |   @   |   #   |   $   |   %   | ------- |   ^   |   &   |   (   |   )   |       |   BSPC    |
 // |       |   \   |   _   |   =   |   /   |   `   | ------- |  "|"  |   "   |   [   |   ]   |       |  LA(BSPC) |
 // |       |       |   -   |   +   |   *   |       | ------- |   ~   |   :   |   {   |   }   |       |   DEL     |
-//                                 |  CMD | ESC | SPC | - |  ENT  |  BSPC  | ^^^ |
+//                                 |  CMD | ESC | SPC | - |  ^^^  |  BSPC  |     |
                         bindings = <
    &none  &kp EXCL &kp AT    &kp HASH  &kp DLLR        &kp PRCNT    &kp CARET &kp AMPS  &kp LPAR &kp RPAR  &none  &kp BSPC
    &none  &kp BSLH &kp UNDER &kp EQUAL &kp SLASH       &kp GRAVE    &kp PIPE  &kp DQT   &kp LBKT &kp RBKT  &c3dqt &kp LA(BSPC)
    &none  &none    &kp MINUS &kp PLUS  &kp KP_MULTIPLY &c3gr        &kp TILDE &kp COLON &kp LBRC &kp RBRC  &none  &kp DEL
-                             &kp LCMD &kp ESC &kp SPACE   &kp RET  &kp BSPC  &trans
+                             &kp LCMD &kp ESC &kp SPACE   &trans  &kp BSPC  &trans
                         >;
                 };
 
