@@ -69,12 +69,12 @@
 // ---------------------------------------------------------------------------------------------------------------
 // |  F1   |  F2   |  F3   |  F4   |  F5   |  F6   | ------- |  PG_UP | LA(LEFT)  |  UP   | LA(RIGHT)  |  HOME  |  BSPC    |
 // |  F7   |  F8   |  F9   |  F10  |  F11  |  F12  | ------- |  PG_DN |   LEFT    | DOWN  |   RIGHT    |  END   | LA(BSPC) |
-// | CAPS  | CMD(Z)| CMD(X)| CMD(C)| CMD(V)|       | ------- |  !NAV  | CMD(LEFT) |       | CMD(RIGHT) |        |   DEL    |
+// | CTRL  | CMD(Z)| CMD(X)| CMD(C)| CMD(V)|       | ------- |  !NAV  | CMD(LEFT) |       | CMD(RIGHT) |        |   DEL    |
 //                           | LCMD | ESC | SHIFT/SPC | - |  ENT  |  ^^^  |   ALT   |
                         bindings = <
    &kp F1   &kp F2    &kp F3    &kp F4     &kp F5    &kp F6         &kp PG_UP  &kp LA(LEFT)  &kp UP   &kp LA(RIGHT) &kp LG(UP)   &kp BSPC
    &kp F7   &kp F8    &kp F9    &kp F10    &kp F11   &kp F12        &kp PG_DN  &kp LEFT      &kp DOWN &kp RIGHT     &kp LG(DOWN) &kp LA(BSPC)
-   &kp CAPS &kp LG(Z) &kp LG(X) &kp LG(C)  &kp LG(V) &none          &tog NAV   &kp LG(LEFT)  &none    &kp LG(RIGHT) &none          &kp DEL
+   &kp LCTRL &kp LG(Z) &kp LG(X) &kp LG(C)  &kp LG(V) &none         &tog NAV   &kp LG(LEFT)  &none    &kp LG(RIGHT) &none          &kp DEL
                          &kp LCMD &kp ESC  &mt LSHIFT SPACE     &kp RET   &trans   &kp RALT
                         >;
                 };
@@ -83,23 +83,23 @@
                 lower_layer {
                         label = "NUMROW";
 // ---------------------------------------------------------------------------------------------------------
-// |         |  F1   |  F2   |  F3   |  F4   |  F5   | ------- |  F6   |  F7   |  F8   |  F9   |  F10  |       |
-// |   ESC   |   1   |   2   |   3   |   4   |   5   | ------- |   6   |   7   |   8   |   9   |   0   |       |
-// | !NUMPAD |  F11  |  F12  |   [   |   ]   |   `   | ------- |   `   |   -   |   =   |   \   |       |       |
-//                           |  CMD  |  ^^^  |    SPC   | - |  ENT  |  BSPC  | ALT |
+// |  ESC   |  F1   |  F2   |  F3   |  F4   |   F5    | ------- |  F6   |  F7   |  F8   |  F9   |  F10  |       |
+// |  CAPS  |   1   |   2   |   3   |   4   |    5    | ------- |   6   |   7   |   8   |   9   |   0   |       |
+// |  CTRL  |  F11  |  F12  |   [   |   ]   | !NUMPAD | ------- |   `   |   -   |   =   |   \   |       |       |
+//                               |  CMD  |  ^^^  |  SPC  | - |  ENT  |  BSPC  | ALT |
 
 // ++SHIFT
 // ---------------------------------------------------------------------------------------------------------
-// |         |  F1   |  F2   |  F3   |  F4   |  F5   | ------- |  F6   |  F7   |  F8   |  F9   |  F10  |       |
-// |   ESC   |   !   |   @   |   #   |   $   |   %   | ------- |   ^   |   &   |   *   |   (   |   )   |       |
-// | !NUMPAD |  F11  |  F12  |   {   |   }   |   ~   | ------- |   ~   |   -   |   =   |   \   |       |       |
-//                          |  CMD  |  ^^^  | SHIFT/SPC | - |  ENT  |  BSPC  | ALT |
+// |  ESC   |  F1   |  F2   |  F3   |  F4   |   F5    | ------- |  F6   |  F7   |  F8   |  F9   |  F10  |       |
+// |  CAPS  |   !   |   @   |   #   |   $   |    %    | ------- |   ^   |   &   |   *   |   (   |   )   |       |
+// |  CTRL  |  F11  |  F12  |   {   |   }   | !NUMPAD | ------- |   ~   |   -   |   =   |   \   |       |       |
+//                               |  CMD  |  ^^^  |  ^^^  | - |  ENT  |  BSPC  | ALT |
 
 
                         bindings = <
-   &none       &kp F1   &kp F2    &kp F3    &kp F4    &kp F5        &kp F6       &kp F7       &kp F8    &kp F9    &kp F10   &none
-   &kp ESC     &kp N1   &kp N2    &kp N3    &kp N4    &kp N5        &kp N6       &kp N7       &kp N8    &kp N9    &kp N0    &none
-   &tog NMP    &kp F11  &kp F12   &kp LBKT  &kp RBKT  &kp GRAVE     &kp GRAVE    &kp KP_MINUS &kp KP_EQUAL &none  &kp BSLH  &none
+   &kp ESC     &kp F1   &kp F2    &kp F3    &kp F4    &kp F5        &kp F6       &kp F7       &kp F8    &kp F9    &kp F10   &none
+   &kp CAPS    &kp N1   &kp N2    &kp N3    &kp N4    &kp N5        &kp N6       &kp N7       &kp N8    &kp N9    &kp N0    &none
+   &kp LCTRL   &kp F11  &kp F12   &kp LBKT  &kp RBKT  &tog NMP      &kp GRAVE    &kp KP_MINUS &kp KP_EQUAL &none  &kp BSLH  &none
                	           &kp LCMD &lt NUM ESC &mt LSHIFT SPACE   &kp RET &kp BSPC &kp RALT
                         >;
                 };
@@ -137,14 +137,14 @@
                 numpad_layer {
                         label = "NUMPAD";
 // -----------------------------------------------------------------------------------------------------------
-// |  TAB    |       |       |       |       |       | ------- |   =   |   7   |   8   |   9   |   -   |  BSPC    |
-// | NUMLOCK |       |       |       |       |       | ------- |   *   |   4   |   5   |   6   |   +   | LA(BSPC) |
-// | !NUMPAD |       |       |       |       |       | ------- |   /   |   1   |   2   |   3   |  ENT  |   DEL    |
-//                             | LCMD | ^NUM/ESC |  SPC | - | ENT |   0   |   .   |
+// |  TAB    |       |       |       |       |         | ------- |   =   |   7   |   8   |   9   |   -   |  BSPC    |
+// | NUMLOCK |       |       |       |       |         | ------- |   *   |   4   |   5   |   6   |   +   | LA(BSPC) |
+// |  CTRL   |       |       |       |       | !NUMPAD | ------- |   /   |   1   |   2   |   3   |  ENT  |   DEL    |
+//                               | LCMD | ^NUM/ESC |  SPC | - |  ENT  |   0   |   .   |
                         bindings = <
-   &kp TAB     &none   &none   &none   &none   &none     &kp KP_EQUAL    &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_MINUS &kp BSPC
-   &kp KP_NLCK &none   &none   &none   &none   &none     &kp KP_ASTERISK &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_PLUS  &kp LA(BSPC)
-   &tog NMP    &none   &none   &none   &none   &none     &kp KP_SLASH    &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_ENTER &kp DEL
+   &kp TAB     &none   &none   &none   &none   &none       &kp KP_EQUAL    &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_MINUS &kp BSPC
+   &kp KP_NLCK &none   &none   &none   &none   &none       &kp KP_ASTERISK &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_PLUS  &kp LA(BSPC)
+   &kp LCTRL   &none   &none   &none   &none   &tog NMP    &kp KP_SLASH    &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_ENTER &kp DEL
                              &mo LCMD &lt NUM ESC &kp SPC  &kp RET  &kp KP_N0 &kp KP_DOT
                         >;
                 };
