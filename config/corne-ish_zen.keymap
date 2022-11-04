@@ -16,11 +16,14 @@
 #define ADJ 4
 #define NMP 5
 
+
+&mt {
+    flavor = "tap-preferred";
+    tapping_term_ms = <200>;
+};
+
+
 / {
-        &mt {
-            flavor = "tap-preferred";
-            tapping_term_ms = <200>;
-        };
 
         macros {
                 c3gr: combo_3_grave {
