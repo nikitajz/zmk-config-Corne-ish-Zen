@@ -107,12 +107,12 @@
                 raise_layer {
                         label = "SYMBOL";
 // ---------------------------------------------------------------------------------------------------------
-// |       |   !   |   @   |   #   |   $   |   %   | ------- |   ^   |   &   |   (   |   )   |       |   BSPC    |
+// |       |   !   |   @   |   #   |   $   |   %   | ------- |   ^   |   &   |   (   |   )   |  \ua' |   BSPC    |
 // |       |   \   |   _   |   =   |   *   |   `   | ------- |  "|"  |   "   |   [   |   ]   |   :   |  LA(BSPC) |
 // |       |       |   -   |   +   |   /   |       | ------- |   ~   |   :   |   {   |   }   |   ?   |   DEL     |
 //                                 |  CMD | ESC | SPC | - |  ^^^  |  BSPC  |     |
                         bindings = <
-   &none  &kp EXCL &kp AT    &kp HASH  &kp DLLR        &kp PRCNT    &kp CARET &kp AMPS  &kp LPAR &kp RPAR  &c3dqt    &kp BSPC
+   &none  &kp EXCL &kp AT    &kp HASH  &kp DLLR        &kp PRCNT    &kp CARET &kp AMPS  &kp LPAR &kp RPAR  &kp BSLH  &kp BSPC
    &none  &kp BSLH &kp UNDER &kp EQUAL &kp KP_MULTIPLY &kp GRAVE    &kp PIPE  &kp DQT   &kp LBKT &kp RBKT  &kp COLON &kp LA(BSPC)
    &none  &none    &kp MINUS &kp PLUS  &kp SLASH       &c3gr        &kp TILDE &kp COLON &kp LBRC &kp RBRC  &kp QMARK &kp DEL
                              &kp LCMD &kp ESC &kp SPACE   &trans  &kp BSPC  &trans
