@@ -54,9 +54,9 @@
 // |  CTRL |   Z   |   X   |   C   |   V   |   B   | ------- |   N   |   M   |   ,   |   .   |   /   | ALT/ESC |
 //                      |  CMD | ^NUM/ESC | SHIFT/SPC | - | ^SYM/ENT | ^NAV/BSPC  | HYPER |
                         bindings = <
- &kp TAB     &kp Q    &kp W    &kp E    &kp R    &kp T        &kp Y    &kp U     &kp I        &kp O      &kp P        &kp BSPC
- &kp LALT    &kp A    &kp S    &kp D    &kp F    &kp G        &kp H    &kp J     &kp K        &kp L      &kp SEMI     &lt ADJ SQT
- &kp LCTRL   &kp Z    &kp X    &kp C    &kp V    &kp B        &kp N    &kp M     &kp COMMA    &kp DOT    &kp FSLH     &mt RALT ESC
+ &kp TAB     &kp Q        &kp W        &kp E      &kp R       &kp T        &kp Y    &kp U       &kp I        &kp O       &kp P            &kp BSPC
+ &kp LALT    &lt LSHIFT A &lt LCTRL S  &lt LALT D &lt LCMD F  &kp G        &kp H    &lt RCMD J  &lt RALT K   &lt RCTRL L &lt RSHIFT SEMI  &lt ADJ SQT
+ &kp LCTRL   &kp Z        &kp X        &kp C      &kp V       &kp B        &kp N    &kp M       &kp COMMA    &kp DOT     &kp FSLH         &mt RALT ESC
                     &kp LCMD &lt NUM ESC &mt LSHIFT SPACE     &lt SYM RET &lt NAV BSPC &kp CAPS
                            >;
                    };
@@ -72,9 +72,9 @@
 // | CTRL  | CMD(Z)| CMD(X)| CMD(C)| CMD(V)|       | ------- |  !NAV  | CMD(LEFT) |       | CMD(RIGHT) |        |   ESC  |
 //                           | LCMD | CTRL |  SHIFT   | - |  ENT  |  ^^^  |   ALT   |
                         bindings = <
-   &kp F11   &kp F1   &kp F2   &kp F3    &kp F4    &kp F5        &kp PG_UP  &kp LA(LEFT)  &kp UP   &kp LA(RIGHT) &kp LG(UP)   &kp BSPC
-   &kp F12   &kp F6   &kp F7   &kp F8    &kp F9    &kp F10       &kp PG_DN  &kp LEFT      &kp DOWN &kp RIGHT     &kp LG(DOWN) &kp DEL
-   &kp LCTRL &kp LG(Z) &kp LG(X) &kp LG(C)  &kp LG(V) &none      &tog NAV   &kp LG(LEFT)  &none    &kp LG(RIGHT) &none        &kp ESC  
+   &kp F11   &kp F1         &kp F2         &kp F3       &kp F4       &kp F5        &kp PG_UP  &kp LA(LEFT)  &kp UP   &kp LA(RIGHT) &kp LG(UP)   &kp BSPC
+   &kp F12   &lt LSHIFT F6  &lt LCTRL F7   &lt LALT F8  &lt LCMD F9  &kp F10       &kp PG_DN  &kp LEFT      &kp DOWN &kp RIGHT     &kp LG(DOWN) &kp DEL
+   &kp LCTRL &kp LG(Z)      &kp LG(X)      &kp LG(C)    &kp LG(V)    &none         &tog NAV   &kp LG(LEFT)  &none    &kp LG(RIGHT) &none        &kp ESC  
                          &kp LCMD &kp LCTRL &kp LSHIFT           &kp RET   &trans   &kp RALT
                         >;
                 };
