@@ -107,15 +107,15 @@
                 raise_layer {
                         label = "SYMBOL";
 // ---------------------------------------------------------------------------------------------------------
-// |       |   !   |   @   |   #   |   $   |   %   | ------- |   ^   |   &   |   (   |   )   |  \uaʼ |   BSPC    |
-// |       |   \   |   _   |   =   |   *   |   `   | ------- |  "|"  |   "   |   [   |   ]   |   :   |  LA(BSPC) |
-// |       |       |   -   |   +   |   /   |       | ------- |   ~   |   :   |   {   |   }   |   ?   |   DEL     |
+// |       |   ~   |   !   |   <   |   `   |   ``` | ------- |   "   |  ```  |   >   |   ?   |  \uaʼ |   BSPC    |
+// |   !   |   @   |   _   |   [   |   (   |   {   | ------- |   }   |   )   |   ]   |   -   |   :   |  LA(BSPC) |
+// |   ~   |   %   |   &   |   |   |   #   |   ^   | ------- |   $   |   =   |   *   |   +   |   /   |   DEL     |
 //                                 |  CMD | ESC | SPC | - |  ^^^  |  BSPC  |     |
                         bindings = <
-   &none  &kp EXCL &kp AT    &kp HASH  &kp DLLR        &kp PRCNT    &kp CARET &kp AMPS  &kp LPAR &kp RPAR  &kp BSLH  &kp BSPC
-   &none  &kp BSLH &kp UNDER &kp EQUAL &kp KP_MULTIPLY &kp GRAVE    &kp PIPE  &kp DQT   &kp LBKT &kp RBKT  &kp COLON &kp LA(BSPC)
-   &none  &none    &kp MINUS &kp PLUS  &kp SLASH       &c3gr        &kp TILDE &kp COLON &kp LBRC &kp RBRC  &kp QMARK &kp DEL
-                             &kp LCMD &kp ESC &kp SPACE   &trans  &kp BSPC  &trans
+   &kp none   &kp TILDE &kp EXCL  &kp LT    &kp GRAVE  &c3gr         &kp DQT    &c3gr     &kp GT          &kp QMARK &kp BSLH  &kp BSPC
+   &kp EXCL   &kp AT    &kp UNDER &kp LBKT  &kp LPAR   &kp LBRC      &kp RBRC   &kp RPAR  &kp RBKT        &kp MINUS &kp COLON &kp LA(BSPC)
+   &kp TILDE  &kp PRCNT &kp AMPS  &kp PIPE  &kp HASH   &kp CARET     &kp DLLR   &kp EQUAL &kp KP_MULTIPLY &kp PLUS  &kp SLASH &kp DEL
+                                  &kp LCMD  &kp ESC    &kp SPACE     &trans  &kp BSPC  &trans
                         >;
                 };
 
