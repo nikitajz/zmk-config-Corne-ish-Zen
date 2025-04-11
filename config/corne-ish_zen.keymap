@@ -112,7 +112,7 @@
 // |   ~   |   %   |   &   |   |   |   #   |   ^   | ------- |   $   |   =   |   *   |   +   |   /   |   DEL     |
 //                                 |  CMD | ESC | SPC | - |  ^^^  |  BSPC  |     |
                         bindings = <
-   &kp none   &kp TILDE &kp EXCL  &kp LT    &kp GRAVE  &c3gr         &kp DQT    &c3gr     &kp GT          &kp QMARK &kp BSLH  &kp BSPC
+   &none   &kp TILDE &kp EXCL  &kp LT    &kp GRAVE  &c3gr         &kp DQT    &c3gr     &kp GT          &kp QMARK &kp BSLH  &kp BSPC
    &kp EXCL   &kp AT    &kp UNDER &kp LBKT  &kp LPAR   &kp LBRC      &kp RBRC   &kp RPAR  &kp RBKT        &kp MINUS &kp COLON &kp LA(BSPC)
    &kp TILDE  &kp PRCNT &kp AMPS  &kp PIPE  &kp HASH   &kp CARET     &kp DLLR   &kp EQUAL &kp KP_MULTIPLY &kp PLUS  &kp SLASH &kp DEL
                                   &kp LCMD  &kp ESC    &kp SPACE     &trans  &kp BSPC  &trans
